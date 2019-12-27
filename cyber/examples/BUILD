@@ -47,4 +47,16 @@ cc_binary(
     ],
 )
 
+cc_binary(
+    name = "record_exporter",
+    srcs = ["record_exporter.cc"],
+    deps = [
+        "//cyber",
+        "//cyber/proto:record_cc_proto",
+        "//modules/control/proto:control_proto",
+        "//modules/localization/proto:localization_proto",
+    ],
+)
+
+
 cpplint()
